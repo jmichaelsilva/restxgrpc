@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package grpc;
+
+service ImageService {
+  rpc SendImage (SendImageRequest) returns (SendImageResponse) {}
+}
+
+message SendImageRequest {
+  bytes image = 1; 
+}
+  
+message SendImageResponse {
+  string message = 1; 
+}
